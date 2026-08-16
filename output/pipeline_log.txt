@@ -1,0 +1,23 @@
+Pipeline run started: 2026-08-16 03:54:50
+Scanning data/raw_exports for raw planner exports...
+Reading planner_export_central_week32.csv
+  112 rows read
+Reading planner_export_east_week32.csv
+  113 rows read
+Reading planner_export_north_week32.xlsx
+  112 rows read
+Reading planner_export_south_week32.csv
+  112 rows read
+Reading planner_export_west_week32.xlsx
+  113 rows read
+
+Combined raw rows from all files: 562
+Cleaning consolidated dataset...
+  Dropped 1 row(s) with an unparseable date
+  Dropped 5 row(s) with missing Units Sold (demand can't be safely assumed, so these are excluded rather than filled)
+  Dropped 1 row(s) with a negative Units Sold value (data-entry error)
+  Dropped 1 exact duplicate row(s)
+  Result: 562 raw rows -> 554 clean rows
+
+Saved cleaned dataset -> output/consolidated_data.csv
+Saved summary pivot report -> output/Weekly_Supply_Chain_Summary_Report.xlsx
